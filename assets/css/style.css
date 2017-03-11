@@ -1,0 +1,80 @@
+.center {
+    color: #1ABC9C;
+    font-weight: bold;
+    font-size: 40px;
+    padding: 15px 20px;
+}
+
+img {
+    width: 150px;
+    padding: 0px 10px;
+    margin: 0 20px 10px 20px;
+}
+
+p {
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.instructions {
+    font-size: 25px;
+    font-weight: bold;
+    color: #1ABC9C;
+}
+
+body {
+    background-color: #1abc9c !important;
+}
+
+.container {
+    background-color: white;
+}
+
+section  {
+    padding-top: 2px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #1abc9c;
+    color: white;
+
+    /*font-weight: bold;*/
+    /*text-decoration: underline;*/
+    width: 250px;
+    height: 200px;
+    margin: 30px 0px 20px 20px;
+    font-size: 15px;
+    text-align: center;
+    float: left;
+}
+
+aside  {
+    padding-top: 2px;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #1abc9c;
+    color: white;
+    /*font-weight: bold;*/
+   /* text-decoration: underline;*/
+    width: 250px;
+    height: 200px;
+    margin: 30px 40px 20px 40px;
+    /*margin: 20px 600px 20px 20px;*/
+    font-size: 15px;
+    text-align: center;
+    float: left;
+}
+
+.gems {
+    clear: both;
+}
+
+.wins {
+	margin-top: 10px;
+	height: 90px;
+	outline-color: #1abc9c;
+}
+
+h2 {
+	  border-bottom: 2px solid white;
+	
+}
