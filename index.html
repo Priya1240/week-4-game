@@ -27,29 +27,73 @@
                     </p>
                     <div id="main">
                         <section>
-                            <h2 id="randomNumber">Random Number</h2>
+                            <h2 >Random Number</h2>
+                            <div id="randomNumber"></div>
                         </section>
                         <aside>
-                            <h2>You Score</h2>
+                            <h2>Your Score</h2>
+                            <div id="score"></div>
                         </aside>
                         <div class="panel panel-default">
                             <div class="panel-body wins">
                                 Wins:
+                                <div class=wins></div>
                             </div>
                             <div class="panel-body losses">
                                 Losses:
+                                <div class=losses></div>
                             </div>
                         </div>
-                        <div id="gems">
-                            <img src="assets/images/3a.png">
-                            <img src="assets/images/2a.png">
-                            <img src="assets/images/diamond_star-ruby-128.png">
-                            <img src="assets/images/diamond_drop-emerald-2-128.png">
+                        <div class="gems">
+                            <img id="gem1" src="assets/images/3a.png">
+                            <img id="gem2" src="assets/images/2a.png">
+                            <img id="gem3" src="assets/images/diamond_star-ruby-128.png">
+                            <img id="gem4" src="assets/images/diamond_drop-emerald-2-128.png">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+
+<script src="assets/javascript/game.js"></script>
+<!-- <script type="text/javascript">
+
+
+var wins = 0;
+var losses = 0;
+var randomNumber = 0;
+var yourScore = 0;
+var gem1 = 0;
+var gem2 = 0;
+var gem3 = 0;
+var gem4 = 0;
+var gemVal;
+var targVal;
+
+$(document).ready(function() {
+    startGame();
+    $(".gems").click(function() {
+        var index = $(this).index();
+        var rand = gemVal[index];
+        console.log(gemVal);
+        alert(index+'/'+rand);                   
+    })
+})
+
+function startGame() {
+    var gemVal = getRandom(19, 121);
+    gemVal = [];
+    for (var i = 0; i < 4; i++) {
+        gemVal.push(getRandom(1, 13));
+    }
+}
+
+function getRandom(min, max) {
+    return Math.floor(Math.random() * (max - min) + min)
+}
+
+</script> -->
 </body>
 
 </html>

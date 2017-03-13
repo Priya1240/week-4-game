@@ -1,6 +1,3 @@
-
-<script type="text/javascript">
-
 var wins = 0;
 var losses = 0;
 var randomNumber = 0;
@@ -10,28 +7,84 @@ var gem2 = 0;
 var gem3 = 0;
 var gem4 = 0;
 var gemVal;
-var targVal;
 
-$(document).ready(function() {
-    startGame();
-    $("#gems").click(function() {
-        var index = $(this).index();
-        var rand = gemVal[index];
-        console.log(gemVal);
-        alert(index+'/'+rand);                   
-    })
-})
-
-function startGame() {
-    var gemVal = getRandom(19, 121);
-    gemVal = [];
-    for (var i = 0; i < 4; i++) {
-        gemVal.push(getRandom(1, 13));
-    }
-     $("#randomNumber").html(randomNumber);
-}
 
 function getRandom(min, max) {
-    return Math.floor(Math.random() * (max - min) + min)
+
+    return Math.floor(Math.random() * (max - min) + min);
+
 }
-</script>
+startGame();
+
+
+function displayScore() {
+    $("#score").html(yourScore);
+
+}
+
+function startGame() {
+    resetGame();
+
+    $(".gems>img").on("click", function(e) {
+        var target = $(e.target);
+
+        // yourScore += gems[target.index()];
+
+        if (target.is("#gem1")) {
+            yourScore += gem1;
+
+        }
+        if (target.is("#gem2")) {
+            yourScore += gem2;
+
+
+        }
+        if (target.is("#gem3")) {
+            yourScore += gem3;
+
+        }
+        if (target.is("#gem4")) {
+            yourScore += gem4;
+
+
+        }
+        displayScore();
+        console.log("your_score_is: ", yourScore);
+        checkScore();
+
+    })
+
+    function checkScore() {
+
+        if (randomNumber === yourScore) {
+            wins++;
+            $(".wins").html(wins);
+            resetGame();
+
+        }
+
+        if (yourScore > randomNumber) {
+            losses++;
+            $(".losses").html(losses);
+            resetGame();
+        }
+    }
+
+    function resetGame() {
+        randomNumber = getRandom(19, 121);
+        yourScore = 0;
+        displayScore();
+
+        console.log("random_number: ", randomNumber);
+        // gemVal = [];
+
+        gem1 = getRandom(1, 13);
+        gem2 = getRandom(1, 13);
+        gem3 = getRandom(1, 13);
+        gem4 = getRandom(1, 13);
+
+        console.log("gem_values: ", gem1, gem2, gem3, gem4);
+
+        $("#randomNumber").html(randomNumber);
+    }
+}
